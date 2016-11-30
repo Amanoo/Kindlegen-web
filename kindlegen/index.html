@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>Select book to convert and send to Kindle</title>
+<body>
+
+<form action="upload.php" method="post" enctype="multipart/form-data" onsubmit="return myFunction()">
+    Select book to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <br /><small>Accepted formats are opf, ePub, htm, html, and zip</small>
+    <br />
+    <br />
+    To: <input type="text" name="to" id="to">@kindle.com
+    <br />
+    <br />
+    <input type="submit" value="Convert and send book" name="submit">
+</form>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Please wait while the file is being processed.";
+    return true;
+}
+</script>
+
+</body>
+</html>
